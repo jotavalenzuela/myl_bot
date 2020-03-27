@@ -58,7 +58,7 @@ def armar_mazo(message, bot):
         itembtn3 = types.KeyboardButton('2')
         itembtn4 = types.KeyboardButton('3')
         markup.add(itembtn1, itembtn2, itembtn3)
-        bots.send_message(message.chat.id, "cuantas copias de [insertar nombre de carta] (0 para arrepentirse):", reply_markup=markup)
+        bot.send_message(message.chat.id, "cuantas copias de [insertar nombre de carta] (0 para arrepentirse):", reply_markup=markup)
         pass
     print(mazo)
     pass
