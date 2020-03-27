@@ -24,7 +24,8 @@ def echo_all(message):
 
 @bot.message_handler(commands=['armar_mazo'])
 def echo_all(message):
-	bot.reply_to(message, "crea y guarda tu mazo para luego consultar las cartas que tiene")
+	funciones.armar_mazo(message, bot)
+
 
 @bot.message_handler(commands=['ver_mis_mazos'])
 def echo_all(message):
