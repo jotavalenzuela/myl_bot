@@ -46,7 +46,7 @@ def armar_mazo(message, bot):
     mazo = pd.DataFrame(columns=['carta', 'cantidad'])
     print("test armado de mazo")
     while mazo['cantidad'].sum() < 49:
-        bot.reply_to(message, "llevas" + cantidad.sum() + "cartas... recuerda son 49 (sin contar oro inicial)")
+        bot.reply_to(message, "llevas" + mazo['cantidad'].sum() + "cartas... recuerda son 49 (sin contar oro inicial)")
         #print de pregunta de cartas
         forzar_respuesta = types.ForceReply(selective=False)
         bot.send_message(chat_id, "favor ingresa el nombre de la carta que quieres agregar al mazo: ",reply_markup=forzar_respuesta)
