@@ -1,14 +1,10 @@
 import re
 import sql_worker
+from sqlalchemy import *
 
-import mysql.connector
-from mysql.connector import Error
+engine = create_engine('mysql://root:unapassquenoseteolvidepoaweonao123.@35.223.9.17/myldb')
 
-try:
-    connection = mysql.connector.connect(host='127.0.0.1', database= 'myldb', user ='usr_tokendb', password = 'passdelostoken7172')
-except Exception as e:
-    print(e)
-    raise
+connection = engine.connect()
 
 text_responses = {
 	'welcome' :
