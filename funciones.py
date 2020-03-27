@@ -44,12 +44,14 @@ def ver_cartas(message, bot):
 
 def armar_mazo(message, bot):
     mazo = pd.DataFrame(columns=['carta', 'cantidad'])
+    bot_async = telebot.AsyncTeleBot("1077001880:AAHmY_d_jkl6fQ3uAX8NqgnZOjz3VSdeGJA")
+    task = bot_async.get_me()
     print("test armado de mazo")
     while mazo['cantidad'].sum() < 49:
         bot.reply_to(message, "llevas " + str(mazo['cantidad'].sum()) + " cartas... recuerda son 49 (sin contar oro inicial)")
         #print de pregunta de cartas
         forzar_respuesta = types.ForceReply(selective=False)
-        bot.send_message(message.chat.id, "favor ingresa el nombre de la carta que quieres agregar al mazo: ",reply_markup=forzar_respuesta)
+        bot_async.send_message(message.chat.id, "favor ingresa el nombre de la carta que quieres agregar al mazo: ",reply_markup=forzar_respuesta)
         #print de cantidad de cartas
         markup = types.ReplyKeyboardMarkup(row_width=1)
         itembtn1 = types.KeyboardButton('0')
@@ -57,7 +59,7 @@ def armar_mazo(message, bot):
         itembtn3 = types.KeyboardButton('2')
         itembtn4 = types.KeyboardButton('3')
         markup.add(itembtn1, itembtn2, itembtn3, itembtn4)
-        bot.send_message(message.chat.id, "cuantas copias de [insertar nombre de carta] (0 para arrepentirse):", reply_markup=markup)
+        bot_async.send_message(message.chat.id, "cuantas copias de [insertar nombre de carta] (0 para arrepentirse):", reply_markup=markup)
         result = task.wait()
         print(result)
         pass
