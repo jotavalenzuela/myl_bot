@@ -45,7 +45,7 @@ def ver_cartas(message, bot):
 def armar_mazo(message, bot):
     mazo = pd.DataFrame(columns=['carta', 'cantidad'])
     print("test armado de mazo")
-    while cantidad.sum() < 49:
+    while mazo['cantidad'].sum() < 49:
         bot.reply_to(message, "llevas" + cantidad.sum() + "cartas... recuerda son 49 (sin contar oro inicial)")
         #print de pregunta de cartas
         forzar_respuesta = types.ForceReply(selective=False)
