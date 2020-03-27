@@ -1,6 +1,8 @@
 import re
 import sql_worker
 from sqlalchemy import *
+import pandas as pd
+from telebot import types
 
 engine = create_engine('mysql://root:unapassquenoseteolvidepoaweonao123.@35.223.9.17/myldb')
 
@@ -41,4 +43,21 @@ def ver_cartas(message, bot):
 	pass
 
 def armar_mazo(message, bot):
-	pass
+    mazo = pd.DataFRame(columns=['carta', 'cantidad'])
+    print("test armado de mazo")
+    while cantidad.sum() < 49:
+        bot.reply_to(message, "llevas" + cantidad.sum() + "cartas... recuerda son 49 (sin contar oro inicial)")
+        #print de pregunta de cartas
+        forzar_respuesta = types.ForceReply(selective=False)
+        bot.send_message(chat_id, "favor ingresa el nombre de la carta que quieres agregar al mazo: ",reply_markup=forzar_respuesta))
+        #print de cantidad de cartas
+        markup = types.ReplyKeyboardMarkup(row_width=2)
+        itembtn1 = types.KeyboardButton('0')
+        itembtn2 = types.KeyboardButton('1')
+        itembtn3 = types.KeyboardButton('2')
+        itembtn4 = types.KeyboardButton('3')
+        markup.add(itembtn1, itembtn2, itembtn3)
+        tb.send_message(chat_id, "cuantas copias de [insertar nombre de carta] (0 para arrepentirse):", reply_markup=markup)
+        pass
+    print(mazo)
+    pass
