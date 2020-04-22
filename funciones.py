@@ -3,7 +3,7 @@ import sql_worker
 from sqlalchemy import *
 import pandas as pd
 import telebot
-from telebot.types import *
+from telebot import types
 
 
 engine = create_engine('mysql://root:unapassquenoseteolvidepoaweonao123.@35.223.9.17/myldb')
