@@ -13,7 +13,7 @@ text_responses = {
 	'welcome' :
 		u'Hola {username}!\n\n'
 		u'En este bot puedes hacer las siguientes cositas relacionadas con el TCG Mitos y Leyendas :3 \n\n'
-		u'Revisar cartas: puedes buscar cartas con el comando /ver_cartas y el nombre de la carta que busques o el codigo coleccionista (ES = espada sagrada HE = helenica DR = Dominios de RA HD = Hijos de Daana)\nEjemplos: /ver_cartas rey arturo pendragon /ver_cartas ES001 (WORK IN PROGRESS)\n\n'
+		u'Revisar cartas: puedes buscar cartas con el comando /ver_cartas y el nombrde de la carta que busques o el codigo coleccionista (ES = espada sagrada HE = helenica DR = Dominios de RA HD = Hijos de Daana)\nEjemplos: /ver_cartas rey arturo pendragon /ver_cartas ES001 (WORK IN PROGRESS)\n\n'
 		u'Armar mazos: puedes agregar cartas a un mazo con el comando /armar_mazo para consultarlo o compartir la lista de cartas de forma privada o publica! (WORK IN PROGRESS)\n\n'
 		u'Ver mis mazos: con este comando /ver_mis_mazos puedes listar los mazos que tengas para obtener el id y poder compartirlo ;) (WORK IN PROGRESS)\n\n'
 }
